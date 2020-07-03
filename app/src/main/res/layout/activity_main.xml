@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+
+    >
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <TableRow
         android:gravity="center"
         android:weightSum="2"
@@ -73,7 +80,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text=" Active Team A " />
+                android:text="👉Activate Team A " />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#800080"
+                android:textColor="#fff"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="👇ADD RUN" />
 
 
         <LinearLayout
@@ -130,7 +146,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:text=" Active Team B " />
+                android:text="👉Activate Team B " />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#800080"
+                android:textColor="#fff"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="👇ADD RUN" />
 
 
             <LinearLayout
@@ -209,11 +233,42 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/addSpecialScore"
-            android:text="Hit Score"
+            android:text="Hit For Special Score"
             android:padding="15dp"
             android:layout_marginLeft="45dp"
             android:gravity="center"
             />
     </TableRow>
 
+    <TableRow>
+        <TextView
+            android:id="@+id/result"
+            android:padding="15dp"
+            android:layout_marginLeft="35dp"
+            android:background="#ff7f50"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            />
+    </TableRow>
+    <TableRow
+        >
+        <TextView
+            android:textColor="#fff"
+            android:background="#800080"
+            android:padding="20dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/setRules"
+            android:layout_marginLeft="20dp"
+            />
+    </TableRow>
+
 </TableLayout>
+
+
+</androidx.core.widget.NestedScrollView>
